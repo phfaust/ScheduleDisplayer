@@ -26,16 +26,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        shows = [TVShow]()
         fetchResults()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // fetch results from url
     func fetchResults(){
         let urlString = "https://www.whatsbeef.net/wabz/guide.php?start=1"
@@ -63,7 +62,6 @@ class ViewController: UIViewController {
                 print("Error serializing json:", jsonErr)
             }
             
-        }.resume()
+            }.resume()
     }
 }
-
