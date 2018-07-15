@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7566B9E320FB3ACE00B35E29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */; };
+		7566B9E420FB3ACE00B35E29 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */; };
 		7587DB3720F7363800D66C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3620F7363800D66C31 /* AppDelegate.swift */; };
-		7587DB3920F7363800D66C31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3820F7363800D66C31 /* ViewController.swift */; };
+		7587DB3920F7363800D66C31 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3820F7363800D66C31 /* TableViewController.swift */; };
 		7587DB3C20F7363800D66C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7587DB3A20F7363800D66C31 /* Main.storyboard */; };
 		7587DB3F20F7363800D66C31 /* ScheduleDisplayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3D20F7363800D66C31 /* ScheduleDisplayer.xcdatamodeld */; };
 		7587DB4120F7363900D66C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7587DB4020F7363900D66C31 /* Assets.xcassets */; };
@@ -35,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		7587DB3320F7363800D66C31 /* ScheduleDisplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleDisplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587DB3620F7363800D66C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7587DB3820F7363800D66C31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7587DB3820F7363800D66C31 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7587DB3B20F7363800D66C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7587DB3E20F7363800D66C31 /* ScheduleDisplayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScheduleDisplayer.xcdatamodel; sourceTree = "<group>"; };
 		7587DB4020F7363900D66C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				7587DB3620F7363800D66C31 /* AppDelegate.swift */,
-				7587DB3820F7363800D66C31 /* ViewController.swift */,
+				7587DB3820F7363800D66C31 /* TableViewController.swift */,
 				7587DB3A20F7363800D66C31 /* Main.storyboard */,
+				7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */,
+				7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */,
 				7587DB4020F7363900D66C31 /* Assets.xcassets */,
 				7587DB4220F7363900D66C31 /* LaunchScreen.storyboard */,
 				7587DB4520F7363900D66C31 /* Info.plist */,
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7587DB4420F7363900D66C31 /* LaunchScreen.storyboard in Resources */,
+				7566B9E420FB3ACE00B35E29 /* TableViewCell.xib in Resources */,
 				7587DB4120F7363900D66C31 /* Assets.xcassets in Resources */,
 				7587DB3C20F7363800D66C31 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7587DB3920F7363800D66C31 /* ViewController.swift in Sources */,
+				7587DB3920F7363800D66C31 /* TableViewController.swift in Sources */,
+				7566B9E320FB3ACE00B35E29 /* TableViewCell.swift in Sources */,
 				7587DB3F20F7363800D66C31 /* ScheduleDisplayer.xcdatamodeld in Sources */,
 				7587DB3720F7363800D66C31 /* AppDelegate.swift in Sources */,
 			);
