@@ -30,7 +30,7 @@ class TableViewController: UITableViewController {
         let customCellNib = UINib(nibName: "TableViewCell", bundle: nil)
         self.tableView.register(customCellNib, forCellReuseIdentifier: "customCell")
 //        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "My Shows"
+        navigationItem.title = "My Movies"
         fetchResults()
         // Do any additional setup after loading the view, typically from a nib.
     }
