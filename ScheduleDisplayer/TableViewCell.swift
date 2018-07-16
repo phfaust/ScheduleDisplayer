@@ -18,6 +18,9 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        channelImg.contentMode = UIViewContentMode.scaleAspectFit
+        ratingImg.contentMode = UIViewContentMode.scaleAspectFit
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
