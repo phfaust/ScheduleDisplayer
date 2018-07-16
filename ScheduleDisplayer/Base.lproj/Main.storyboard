@@ -35,6 +35,10 @@
                                 <constraint firstItem="6xk-br-BVb" firstAttribute="leading" secondItem="3Xs-dO-A4B" secondAttribute="leading" constant="15" id="j7A-wj-h3A"/>
                             </constraints>
                         </view>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="hFh-Nv-sMW">
+                            <rect key="frame" x="0.0" y="110" width="375" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="t6d-E0-PTN">
                                 <rect key="frame" x="0.0" y="66" width="375" height="44"/>
@@ -51,6 +55,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="6AE-5c-crB"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="hFh-Nv-sMW" id="R0U-3O-Yhi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOe-Ny-JXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

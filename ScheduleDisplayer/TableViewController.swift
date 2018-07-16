@@ -22,7 +22,10 @@ struct TVShow: Decodable {
 }
 
 class TableViewController: UITableViewController {
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var shows = [TVShow]()
+    var batch = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +34,7 @@ class TableViewController: UITableViewController {
         self.tableView.register(customCellNib, forCellReuseIdentifier: "customCell")
 //        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "My Movies"
-        fetchResults()
+        fetchResults(batch: batch)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -41,8 +44,8 @@ class TableViewController: UITableViewController {
     }
     
     // fetch results from url
-    func fetchResults(){
-        let urlString = "https://www.whatsbeef.net/wabz/guide.php?start=1"
+    func fetchResults(batch: Int){
+        let urlString = "https://www.whatsbeef.net/wabz/guide.php?start=\(batch * 10)"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -64,6 +67,8 @@ class TableViewController: UITableViewController {
                         i+=1;
                     }
                     
+                    self.loadingIndicator.stopAnimating()
+                    
                     self.tableView.reloadData()
                     
                 } catch let jsonErr {
@@ -71,10 +76,13 @@ class TableViewController: UITableViewController {
                 }
             }
         }.resume()
+        
+        self.batch += 1
     }
     
     func getRatingImage(rating: String) -> UIImage {
-        return UIImage(named: rating)!
+        guard let ratingImg = UIImage(named: rating) else { return UIImage(named: "NR")! }
+        return ratingImg
     }
     
     func getChannelImage(channel: String) -> UIImage {
@@ -86,7 +94,6 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId") as! TableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TableViewCell
         let show = shows[indexPath.row]
         
@@ -98,5 +105,15 @@ class TableViewController: UITableViewController {
         cell.showTime.text = showTime
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElem = shows.count - 1
+        
+        if indexPath.row == lastElem && shows.count < 28 {
+            loadingIndicator.startAnimating()
+            
+            fetchResults(batch: batch)
+        }
     }
 }
