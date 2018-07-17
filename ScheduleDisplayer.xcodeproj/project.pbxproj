@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7566B9E320FB3ACE00B35E29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */; };
 		7566B9E420FB3ACE00B35E29 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */; };
+		75812B9A20FCF7950091D2A0 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75812B9920FCF7950091D2A0 /* ShowViewController.swift */; };
+		75812B9C20FD025E0091D2A0 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75812B9B20FD025E0091D2A0 /* TVShow.swift */; };
+		75812B9E20FDED440091D2A0 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75812B9D20FDED440091D2A0 /* HelperFunctions.swift */; };
+		75812BA020FDFC1C0091D2A0 /* ShowDescriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 75812B9F20FDFC1C0091D2A0 /* ShowDescriptions.json */; };
 		7587DB3720F7363800D66C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3620F7363800D66C31 /* AppDelegate.swift */; };
 		7587DB3920F7363800D66C31 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587DB3820F7363800D66C31 /* TableViewController.swift */; };
 		7587DB3C20F7363800D66C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7587DB3A20F7363800D66C31 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		75812B9920FCF7950091D2A0 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		75812B9B20FD025E0091D2A0 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		75812B9D20FDED440091D2A0 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		75812B9F20FDFC1C0091D2A0 /* ShowDescriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShowDescriptions.json; sourceTree = "<group>"; };
 		7587DB3320F7363800D66C31 /* ScheduleDisplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleDisplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587DB3620F7363800D66C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7587DB3820F7363800D66C31 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -103,9 +111,13 @@
 		7587DB3520F7363800D66C31 /* ScheduleDisplayer */ = {
 			isa = PBXGroup;
 			children = (
+				75812B9F20FDFC1C0091D2A0 /* ShowDescriptions.json */,
 				7587DB3620F7363800D66C31 /* AppDelegate.swift */,
 				7587DB3820F7363800D66C31 /* TableViewController.swift */,
 				7587DB3A20F7363800D66C31 /* Main.storyboard */,
+				75812B9920FCF7950091D2A0 /* ShowViewController.swift */,
+				75812B9B20FD025E0091D2A0 /* TVShow.swift */,
+				75812B9D20FDED440091D2A0 /* HelperFunctions.swift */,
 				7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */,
 				7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */,
 				7587DB4020F7363900D66C31 /* Assets.xcassets */,
@@ -196,6 +208,9 @@
 		7587DB2B20F7363700D66C31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					DescriptionView,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Fiel Faustino";
@@ -239,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7587DB4420F7363900D66C31 /* LaunchScreen.storyboard in Resources */,
+				75812BA020FDFC1C0091D2A0 /* ShowDescriptions.json in Resources */,
 				7566B9E420FB3ACE00B35E29 /* TableViewCell.xib in Resources */,
 				7587DB4120F7363900D66C31 /* Assets.xcassets in Resources */,
 				7587DB3C20F7363800D66C31 /* Main.storyboard in Resources */,
@@ -266,7 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75812B9E20FDED440091D2A0 /* HelperFunctions.swift in Sources */,
+				75812B9A20FCF7950091D2A0 /* ShowViewController.swift in Sources */,
 				7587DB3920F7363800D66C31 /* TableViewController.swift in Sources */,
+				75812B9C20FD025E0091D2A0 /* TVShow.swift in Sources */,
 				7566B9E320FB3ACE00B35E29 /* TableViewCell.swift in Sources */,
 				7587DB3F20F7363800D66C31 /* ScheduleDisplayer.xcdatamodeld in Sources */,
 				7587DB3720F7363800D66C31 /* AppDelegate.swift in Sources */,
