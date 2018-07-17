@@ -20,7 +20,7 @@ class TableViewCell: UITableViewCell {
         // Initialization code
         
         channelImg.contentMode = UIViewContentMode.scaleAspectFit
-        ratingImg.contentMode = UIViewContentMode.scaleAspectFit
+        ratingImg.contentMode = UIViewContentMode.right
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
