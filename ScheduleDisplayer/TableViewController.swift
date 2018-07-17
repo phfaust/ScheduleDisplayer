@@ -13,29 +13,22 @@ struct WBResponse: Decodable {
     let count: Int
 }
 
-struct TVShow: Decodable {
-    let name: String
-    let startTime: String
-    let endTime: String
-    let channel: String
-    let rating: String
-}
-
 class TableViewController: UITableViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var shows = [TVShow]()
     var batch = 0
+    var selectedShow = TVShow(name: "", startTime: "", endTime: "", channel: "", rating: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
         let customCellNib = UINib(nibName: "TableViewCell", bundle: nil)
         self.tableView.register(customCellNib, forCellReuseIdentifier: "customCell")
-//        navigationController?.navigationBar.prefersLargeTitles = true
+        
         navigationItem.title = "My Movies"
         fetchResults(batch: batch)
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,7 +41,8 @@ class TableViewController: UITableViewController {
         let urlString = "https://www.whatsbeef.net/wabz/guide.php?start=\(batch * 10)"
         guard let url = URL(string: urlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
+        URLSession.shared.dataTask(with: url) {
+            (data, response, err) in
             DispatchQueue.main.async {
                 guard let data = data else { return }
                 
@@ -63,7 +57,7 @@ class TableViewController: UITableViewController {
                     
                     var i = 1;
                     for show in self.shows {
-                        print("Show \(i): \(show)");
+                        print("Show \(i): \(show.rating)");
                         i+=1;
                     }
                     
@@ -80,15 +74,6 @@ class TableViewController: UITableViewController {
         self.batch += 1
     }
     
-    func getRatingImage(rating: String) -> UIImage {
-        guard let ratingImg = UIImage(named: rating) else { return UIImage(named: "NR")! }
-        return ratingImg
-    }
-    
-    func getChannelImage(channel: String) -> UIImage {
-        return UIImage(named: channel)!
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shows.count
     }
@@ -98,8 +83,8 @@ class TableViewController: UITableViewController {
         let show = shows[indexPath.row]
         
         cell.showName.text = show.name
-        cell.channelImg.image = getChannelImage(channel: show.channel)
-        cell.ratingImg.image = getRatingImage(rating: show.rating)
+        cell.channelImg.image = show.getChannelImage()
+        cell.ratingImg.image = HelperFunctions.scaleImagetoHeight(image: show.getRatingImage(), desiredHeight: 15)
         
         let showTime = "\(show.startTime) - \(show.endTime)"
         cell.showTime.text = showTime
@@ -114,6 +99,20 @@ class TableViewController: UITableViewController {
             loadingIndicator.startAnimating()
             
             fetchResults(batch: batch)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedShow = shows[indexPath.row]
+        
+        self.performSegue(withIdentifier: "showShowVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showShowVC") {
+            let destinationVC: ShowViewController = segue.destination as! ShowViewController
+            
+            destinationVC.show = selectedShow
         }
     }
 }
