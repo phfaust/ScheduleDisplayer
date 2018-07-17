@@ -119,7 +119,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="291" id="llF-Fx-6cF"/>
-                                            <constraint firstAttribute="width" constant="347" id="tiS-Jy-beQ"/>
                                         </constraints>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -155,6 +154,7 @@
                             <constraint firstItem="4IK-bT-afa" firstAttribute="bottom" secondItem="EHg-lD-SXY" secondAttribute="bottom" id="lyf-6n-reH"/>
                             <constraint firstItem="EHg-lD-SXY" firstAttribute="top" secondItem="4IK-bT-afa" secondAttribute="top" id="nZR-ib-wa5"/>
                             <constraint firstItem="EHg-lD-SXY" firstAttribute="trailing" secondItem="4IK-bT-afa" secondAttribute="trailing" id="uFM-fI-GNx"/>
+                            <constraint firstItem="4IK-bT-afa" firstAttribute="trailing" secondItem="gOg-h6-NYX" secondAttribute="trailing" constant="16" id="xWG-KR-wYj"/>
                             <constraint firstItem="4IK-bT-afa" firstAttribute="trailing" secondItem="EHg-lD-SXY" secondAttribute="trailing" id="yEp-ga-r5o"/>
                             <constraint firstItem="EHg-lD-SXY" firstAttribute="top" secondItem="4IK-bT-afa" secondAttribute="top" id="zjh-yR-1rg"/>
                         </constraints>
