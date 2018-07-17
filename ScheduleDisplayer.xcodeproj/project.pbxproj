@@ -88,6 +88,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75812BA120FE30840091D2A0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7587DB3A20F7363800D66C31 /* Main.storyboard */,
+				7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		75812BA220FE30970091D2A0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7587DB3820F7363800D66C31 /* TableViewController.swift */,
+				75812B9920FCF7950091D2A0 /* ShowViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		75812BA320FE30AD0091D2A0 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				75812B9F20FDFC1C0091D2A0 /* ShowDescriptions.json */,
+				75812B9D20FDED440091D2A0 /* HelperFunctions.swift */,
+				7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		75812BA420FE30B40091D2A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75812B9B20FD025E0091D2A0 /* TVShow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7587DB2A20F7363700D66C31 = {
 			isa = PBXGroup;
 			children = (
@@ -111,15 +147,11 @@
 		7587DB3520F7363800D66C31 /* ScheduleDisplayer */ = {
 			isa = PBXGroup;
 			children = (
-				75812B9F20FDFC1C0091D2A0 /* ShowDescriptions.json */,
 				7587DB3620F7363800D66C31 /* AppDelegate.swift */,
-				7587DB3820F7363800D66C31 /* TableViewController.swift */,
-				7587DB3A20F7363800D66C31 /* Main.storyboard */,
-				75812B9920FCF7950091D2A0 /* ShowViewController.swift */,
-				75812B9B20FD025E0091D2A0 /* TVShow.swift */,
-				75812B9D20FDED440091D2A0 /* HelperFunctions.swift */,
-				7566B9E120FB3ACE00B35E29 /* TableViewCell.swift */,
-				7566B9E220FB3ACE00B35E29 /* TableViewCell.xib */,
+				75812BA220FE30970091D2A0 /* View Controllers */,
+				75812BA120FE30840091D2A0 /* Storyboard */,
+				75812BA420FE30B40091D2A0 /* Models */,
+				75812BA320FE30AD0091D2A0 /* Others */,
 				7587DB4020F7363900D66C31 /* Assets.xcassets */,
 				7587DB4220F7363900D66C31 /* LaunchScreen.storyboard */,
 				7587DB4520F7363900D66C31 /* Info.plist */,
