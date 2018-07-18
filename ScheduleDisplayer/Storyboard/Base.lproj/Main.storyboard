@@ -83,24 +83,6 @@
                                             <constraint firstAttribute="width" constant="167" id="z2g-Ui-DiE"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orx-LD-3pY">
-                                        <rect key="frame" x="191" y="90" width="75" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-8K-2tZ">
-                                        <rect key="frame" x="191" y="134" width="47" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vs-vk-npr">
-                                        <rect key="frame" x="191" y="119" width="59" height="15"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGm-Cf-Fd6">
                                         <rect key="frame" x="191" y="16" width="35" height="18"/>
                                         <constraints>
@@ -124,22 +106,40 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orx-LD-3pY">
+                                        <rect key="frame" x="191" y="56" width="75" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-8K-2tZ">
+                                        <rect key="frame" x="191" y="79" width="47" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vs-vk-npr">
+                                        <rect key="frame" x="191" y="94" width="59" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="gOg-h6-NYX" firstAttribute="top" secondItem="qwv-Py-679" secondAttribute="bottom" id="0Ap-ld-N4O"/>
                                     <constraint firstItem="qwv-Py-679" firstAttribute="top" secondItem="vMb-7U-HbG" secondAttribute="bottom" constant="25" id="1HE-CF-bxf"/>
                                     <constraint firstItem="MQn-8K-2tZ" firstAttribute="leading" secondItem="vMb-7U-HbG" secondAttribute="trailing" constant="8" id="1Ww-Ah-xCt"/>
                                     <constraint firstItem="vMb-7U-HbG" firstAttribute="top" secondItem="EHg-lD-SXY" secondAttribute="top" constant="16" id="4UD-Zz-HZ8"/>
+                                    <constraint firstItem="MQn-8K-2tZ" firstAttribute="top" secondItem="Orx-LD-3pY" secondAttribute="bottom" constant="2" id="LTW-Gv-4vQ"/>
                                     <constraint firstItem="aGm-Cf-Fd6" firstAttribute="top" secondItem="EHg-lD-SXY" secondAttribute="top" constant="16" id="MKv-7x-AAv"/>
-                                    <constraint firstItem="0Vs-vk-npr" firstAttribute="top" secondItem="Orx-LD-3pY" secondAttribute="bottom" constant="8" id="QZR-e5-Bkw"/>
                                     <constraint firstItem="aGm-Cf-Fd6" firstAttribute="leading" secondItem="vMb-7U-HbG" secondAttribute="trailing" constant="8" id="STo-I3-cHn"/>
                                     <constraint firstAttribute="trailing" secondItem="gOg-h6-NYX" secondAttribute="trailing" constant="12" id="T6q-Ng-1I5"/>
                                     <constraint firstItem="0Vs-vk-npr" firstAttribute="leading" secondItem="vMb-7U-HbG" secondAttribute="trailing" constant="8" id="bGT-Py-opU"/>
                                     <constraint firstItem="qwv-Py-679" firstAttribute="leading" secondItem="EHg-lD-SXY" secondAttribute="leading" constant="16" id="dqi-dH-qt5"/>
-                                    <constraint firstItem="Orx-LD-3pY" firstAttribute="top" secondItem="aGm-Cf-Fd6" secondAttribute="bottom" constant="56" id="gl8-LJ-oUL"/>
+                                    <constraint firstItem="Orx-LD-3pY" firstAttribute="top" secondItem="aGm-Cf-Fd6" secondAttribute="bottom" constant="22" id="gl8-LJ-oUL"/>
+                                    <constraint firstItem="0Vs-vk-npr" firstAttribute="top" secondItem="MQn-8K-2tZ" secondAttribute="bottom" id="hqM-93-Fqk"/>
                                     <constraint firstItem="Orx-LD-3pY" firstAttribute="leading" secondItem="vMb-7U-HbG" secondAttribute="trailing" constant="8" id="r0n-zD-85e"/>
                                     <constraint firstAttribute="bottom" secondItem="gOg-h6-NYX" secondAttribute="bottom" id="vGK-bv-38w"/>
-                                    <constraint firstItem="MQn-8K-2tZ" firstAttribute="top" secondItem="0Vs-vk-npr" secondAttribute="bottom" id="wld-xV-D84"/>
                                     <constraint firstItem="gOg-h6-NYX" firstAttribute="leading" secondItem="EHg-lD-SXY" secondAttribute="leading" constant="12" id="xgo-vR-EUU"/>
                                     <constraint firstItem="vMb-7U-HbG" firstAttribute="leading" secondItem="EHg-lD-SXY" secondAttribute="leading" constant="16" id="y0U-sA-PHd"/>
                                 </constraints>
