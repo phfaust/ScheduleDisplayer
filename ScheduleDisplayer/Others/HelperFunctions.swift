@@ -27,4 +27,10 @@ class HelperFunctions {
         
         return scaledImg!
     }
+    
+    static func showAlert(title: String, message: String, buttonText: String, viewController: UIViewController) {
+        var alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: nil))
+        viewController.present(alert, animated: true, completion: nil)
+    }
 }
