@@ -30,6 +30,7 @@ class TableViewController: UITableViewController {
     
     var shows = [TVShow]()
     var showImages = [showImageSet]()
+    var numOfShows = 0;
     var batch = 0
     var selectedShow = TVShow(name: "", startTime: "", endTime: "", channel: "", rating: "")
     var refreshEnabled = false
@@ -45,7 +46,7 @@ class TableViewController: UITableViewController {
     @objc
     func refreshData() {
         // Refresh enabled only when there is a connection or json failure
-        if refreshEnabled {
+        if refreshEnabled && shows.count < numOfShows {
             fetchResults(batch: batch)
             refreshEnabled = false
         }
@@ -103,6 +104,7 @@ class TableViewController: UITableViewController {
                     
                     print(wbResponse)
                     
+                    self.numOfShows = wbResponse.count
                     self.shows.append(contentsOf: wbResponse.results)
                     
                     var i = 1;
@@ -161,7 +163,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElem = shows.count - 1
         
-        if indexPath.row == lastElem && shows.count < 28 {
+        if indexPath.row == lastElem && shows.count < numOfShows {
             loadingIndicator.startAnimating()
             
             fetchResults(batch: batch)
